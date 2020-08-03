@@ -1,0 +1,11 @@
+<!-- <input #inputSearch autofocus type="text" class="form-control-lg" placeholder="Search ........." (keyup)="onSearch(inputSearch.value)"/>
+<button class="btn btn-danger ">X</button>
+ -->
+<div class="input-group mb-3">
+ <!--  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2"> -->
+  <input #inputSearch autofocus type="text" class="form-control" placeholder="Search ........." (keyup)="onSearch(inputSearch.value)" aria-label="Recipient's username" aria-describedby="button-addon2" minlength="4"/>
+  <div class="input-group-append">
+    <button class="btn btn-outline-danger" type="clear" id="button-addon2"
+    (click)="inputSearch.value=''; reset() ">X</button>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="row centro juntify-content-center mt-3" *ngIf="character$ | async as character">
+  <div class="col-xs-12 col-sm-6 col-md-6 juntify-content-center">
+    <div class="card">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div class="image">
+            <img
+              [src]="character.image"
+              [alt]="character.name"
+              class="img-fluid rounded flota"
+            />
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 align-self-center">
+          <div class="card-inner border-details">
+            <div class="header">
+              <h2>{{ character.name | slice: 0:15 }}</h2>
+              <!-- <a [routerLink]="['/character-details', character.id]">
+              </a> -->
+              <h4 class="text-muted">{{ character.gender }}</h4>
+              <small class="text-muted">{{ character.created | date }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+</div>
+<button class="btn btn-dark btn-block mt-3" (click)="onGoBack()">Back</button>
